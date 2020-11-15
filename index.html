@@ -50,16 +50,25 @@ o[piuytr[pxxxxxcxxxx      ~ 2020 ~    xxxxxxxtru[pioytru[p
 <body>
     
     <a-scene>
-    <a-entity environment="preset: default; groundTexture: walkernoise; groundColor: #445; grid: none; skyType: gradient; skyColor: #ffffff"></a-entity>
+    <!-- <a-entity environment="preset: default; groundTexture: walkernoise; groundColor: #228B22; groundColor2: #9ACD32; grid: none; skyType: gradient; skyColor: #ffffff"></a-entity> -->
         <a-assets>
             <a-asset-items id="arbusto" src="./assets/arbusto.glb" preload="auto"></a-asset-item>
-            <audio id="miedito" src="./assets/destrozaste-mi-alma.mp3" preload="auto" autoplay loop="true"></audio>
+            <a-asset-items id="perri" src="./assets/perri.glb" preload="auto"></a-asset-item>
+            <a-asset-items id="popi" src="./assets/popi.glb" preload="auto"></a-asset-item>
+            <a-asset-items id="piso" src="./assets/piso.glb" preload="auto"></a-asset-item>
+            <audio id="cancion" src="./assets/cristiancastro.mp3" preload="auto" autoplay loop="true"></audio>
             
             
         </a-assets>
                        <a-entity gltf-model="#arbusto" scale="0.05 0.05 0.05" position="0 0 0"></a-entity>
+                       <a-entity gltf-model="#perri" scale="1 1 1" position="0 0.47 0" rotation='0 -43 0'></a-entity>
+                       <a-entity gltf-model="#popi" scale="0.03 0.03 0.03" position="-0.36 0 -0.323" rotation='0 183 0'></a-entity>
+                       <a-entity gltf-model="#piso" scale="0.1 0.1 0.1" position="0 0 0"></a-entity>
+                       <a-entity sound="src:#cancion; autoplay="true"; loop="true"></a-entity>
+                       <a-entity position="0 0.3 10" rotation='0 -160 0'> <a-camera></a-camera>  </a-entity> 
+                       
                       <!-- 
-                           <a-entity sound="src:#miedito; autoplay="true"; loop="true"></a-entity>
+                           
                       
                         <a-entity position="18 -0.3 -15"> <a-camera></a-camera>  </a-entity> 
                        
